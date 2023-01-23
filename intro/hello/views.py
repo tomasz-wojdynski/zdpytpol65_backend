@@ -1,7 +1,7 @@
-from django.shortcuts import HttpResponse
+from django.shortcuts import render, HttpResponse
 
 
-def hello(request):
+def home(request):
     return HttpResponse(
         """
         <html>
@@ -13,3 +13,4 @@ def hello(request):
         </html>
         """
     )
+
