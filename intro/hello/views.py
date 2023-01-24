@@ -1,4 +1,5 @@
 from markupsafe import escape
+from datetime import datetime
 
 from django.shortcuts import render, HttpResponse
 
@@ -37,4 +38,18 @@ def greet(request):
 
 
 def hello2(request, name):
-    return render(request, 'hello.html')
+    return render(request, 'hello.html', context={'name': name})
+
+
+def is_monday(request):
+    now = datetime.now()
+    if now.weekday() == 0:
+        text = "TAK"
+    else:
+        text = "NIE"
+
+    return render(
+        request,
+        'monday.html',
+        context={'text': text}
+    )

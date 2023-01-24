@@ -9,6 +9,8 @@ urlpatterns = [
     path('ewa/', views.ewa),
     path('greet/', views.greet),
 
+    path('isitmonday/', views.is_monday),
+
     path('<name>/', views.hello),
     path('2/<name>/', views.hello2),
 ]
