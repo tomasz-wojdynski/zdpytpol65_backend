@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <ol>
+        <!-- Iterowanie się po elementach listy-->
+    {% for fruit in fruits %}
+        <li>{{ fruit }}</li>
+    {% endfor %}
+    </ol>
+
+    {# komentarze dtl #}
+    {# {{ fruits[2] }} - tak nie robimy #}
+    {% comment %}
+        .... - komenatrze wielolinijkowe
+    {% endcomment %}
+
+    <!-- Odwołanie się do elementu pod zadanym indeksem (tutaj 2)-->
+    {{ fruits.2 }}
+
+    <p>
+    <!-- Iterowanie się po kluczach słownika-->
+    {% for key in user %}
+        {{ key }}
+    {% endfor %}
+    </p>
+
+    <p>
+    <!-- Iterowanie się po wartościach słownika-->
+    {% for key in user.values %}
+        {{ key }}
+    {% endfor %}
+    </p>
+
+    <p>
+        {{ user.name }}
+    </p>
+
+    <p>
+        {{ cow_1.name }}
+    </p>
+
+    <ol>
+        <!-- Iterowanie się po elementach listy-->
+    {% for fruit in fruits %}
+        <li>{{ forloop.counter0 }} {{ fruit }}</li>
+    {% endfor %}
+    </ol>
+
+    <!-- Filtry -->
+    <p>{{ fruits|length }}</p>
+    <p>{{ fruits.1|upper }}</p>
+    <p>{{ fruits.2|capfirst }}</p>
+
+    <!-- Parametry filtrów -->
+    <p>{{ fruits.1|cut:"a" }}</p>
+    <p>{{ fruits.1|cut:"a"|cut:"n" }}</p>
+
+    <p>{{ fruits|length|add:2 }}</p>
+
+</body>
+</html>

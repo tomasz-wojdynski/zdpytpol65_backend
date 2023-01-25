@@ -53,3 +53,34 @@ def is_monday(request):
         'monday.html',
         context={'is_monday': ans}
     )
+
+
+class Cow:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+
+def show_fruits(request):
+    fruits = [
+        'jabłko',
+        'banan',
+        'winogrona',
+        'mandarynki'
+    ]
+    user = {
+        'name': "Jan",
+        'surname': "Kowalski",
+        "age": 10
+    }
+    cow_1 = Cow("Mućka", 2)
+
+    return render(
+        request,
+        'fruits.html',
+        context={
+            'fruits': fruits,
+            'user': user,
+            'cow_1': cow_1
+        }
+    )
