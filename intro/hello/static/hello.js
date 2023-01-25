@@ -1,0 +1,1 @@
+alert("Czy dzisiaj jest poniedziałek?");

@@ -1,10 +1,21 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <script src="{% static 'hello.js' %}"></script>
 </head>
 <body>
-    {{ text }}
+    {% if is_monday %}
+        <h1 style='color:green;'>TAK</h1>
+        <center>
+        <img src="{% static 'img/cat.jfif' %}">
+        </center>
+    {% else %}
+        <h1 style='color: red'>NIE</h1>
+    {% endif %}
 </body>
 </html>

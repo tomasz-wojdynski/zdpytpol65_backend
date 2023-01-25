@@ -43,13 +43,13 @@ def hello2(request, name):
 
 def is_monday(request):
     now = datetime.now()
-    if now.weekday() == 0:
-        text = "TAK"
-    else:
-        text = "NIE"
+    ans = False
+    print(now.weekday())
+    if now.weekday() == 2:
+        ans = True
 
     return render(
         request,
         'monday.html',
-        context={'text': text}
+        context={'is_monday': ans}
     )
