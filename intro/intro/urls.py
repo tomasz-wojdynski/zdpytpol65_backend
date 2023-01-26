@@ -22,4 +22,5 @@ urlpatterns = [
     path('hello/', include('hello.urls')),
     path('inherit/', include('inheritance.urls')),
     path('links/', include('links.urls')),
+    path('form/', include('formapp.urls')),
 ]
