@@ -2,6 +2,7 @@ from django.shortcuts import render
 
 TASKS = []
 
+
 # Create your views here.
 def register(request):
     task = request.GET.get('task')
