@@ -1,3 +1,4 @@
+# Formularz get - dane zapisywane do pamięci RAM
 from django.shortcuts import render
 
 TASKS = []

@@ -1,3 +1,4 @@
+# Formularz post - dane zapisywane do pamięci RAM
 from django.shortcuts import render, redirect
 
 TASKS = []
@@ -6,6 +7,7 @@ TASKS = []
 # Version II
 def register(request):
     if request.method == "GET":
+        # Wczytywanie z listy TASKS
         return render(
             request,
             'formapp2/register.html',
@@ -17,6 +19,7 @@ def register(request):
     elif request.method == "POST":
         task = request.POST.get('task')
 
+        # Zapisywanie do listy TASKS
         if task:
             TASKS.append(task)
 
