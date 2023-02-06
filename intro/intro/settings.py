@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'links.apps.LinksConfig',
     'formapp.apps.FormappConfig',
     'formapp2.apps.Formapp2Config',
+    'formapp3.apps.Formapp3Config',
 ]
 
 MIDDLEWARE = [

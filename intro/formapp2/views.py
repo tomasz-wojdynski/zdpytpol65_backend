@@ -22,6 +22,7 @@ def register(request):
 
         return redirect('formapp2:register')
         # return redirect('/form2/')
+        # return redirect('/form2/')
 
 
 # Version I
