@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'formapp.apps.FormappConfig',
     'formapp2.apps.Formapp2Config',
     'formapp3.apps.Formapp3Config',
+    'formapp4.apps.Formapp4Config',
 ]
 
 MIDDLEWARE = [
