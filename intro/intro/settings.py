@@ -31,12 +31,15 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # build-in
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # local
     'hello.apps.HelloConfig',
     'inheritance.apps.InheritanceConfig',
     'links.apps.LinksConfig',
@@ -44,6 +47,9 @@ INSTALLED_APPS = [
     'formapp2.apps.Formapp2Config',
     'formapp3.apps.Formapp3Config',
     'formapp4.apps.Formapp4Config',
+
+    # 3rd-part
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
