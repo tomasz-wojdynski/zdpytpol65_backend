@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'formapp2.apps.Formapp2Config',
     'formapp3.apps.Formapp3Config',
     'formapp4.apps.Formapp4Config',
+    'relationapp.apps.RelationappConfig',
 
     # 3rd-part
     'django_extensions',
