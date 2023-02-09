@@ -8,7 +8,7 @@
     <h3>Zmodyfikuj zadanie numer {{ task.id }}</h3>
     <form method="POST">{% csrf_token %}
         <input type="text" name="task" value="{{ task.name }}">
-        <input type="submit" value="Dodaj">
+        <input type="submit" value="Zmodyfikuj">
     </form>
 </body>
 </html>
