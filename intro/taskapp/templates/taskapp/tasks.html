@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Widok listy zadań</title>
+</head>
+<body>
+    <h3>Lista zadań</h3>
+    <a href="{% url 'taskapp:task-create-view' %}"><button>Dodaj zadanie</button></a>
+    <ul>
+        {% for task in tasks %}
+            <li>
+                <a href="{% url 'taskapp:task-detail-view' task.id %}">{{ task.name }}</a>
+                <a href="{% url 'taskapp:task-update-view' task.id %}"><button>Zmodyfikuj</button></a>
+                <a href="{% url 'taskapp:task-delete-view' task.id %}"><button>Usuń</button></a>
+            </li>
+
+        {% endfor %}
+    </ul>
+</body>
+</html>

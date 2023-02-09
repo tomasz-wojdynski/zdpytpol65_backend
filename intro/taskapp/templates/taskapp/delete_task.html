@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Widok usuwania zadania</title>
+</head>
+<body>
+  <h3>Czy napewno chcesz usunąć zadanie {{ task.name }}?</h3>
+  <form method="POST">{% csrf_token %}
+    <input type="submit" value="Potwierdź">
+  </form>
+
+  <a href="{% url 'taskapp:task-list-view' %}"><button>Anuluj</button></a>
+</body>
+</html>
