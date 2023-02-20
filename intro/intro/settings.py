@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'formapp4.apps.Formapp4Config',
     'relationapp.apps.RelationappConfig',
     'taskapp.apps.TaskappConfig',
+    'formsapp.apps.FormsappConfig',
 
     # 3rd-part
     'django_extensions',
