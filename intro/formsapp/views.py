@@ -1,9 +1,10 @@
 from django.shortcuts import render, redirect
 
 from formsapp.models import Message
-from formsapp.forms import MessageForm
+from formsapp.forms import MessageForm, MessageModelForm
 
 
+# Formularz html
 def contact1(request):
     if request.method == "GET":
         return render(
@@ -31,6 +32,7 @@ def contact1(request):
         return redirect('formsapp:contact1')
 
 
+# Formularz Django
 def contact2(request):
     if request.method == "GET":
         form = MessageForm()  # unbound form
@@ -58,3 +60,43 @@ def contact2(request):
             )
 
             return redirect('formsapp:contact2')
+        else:
+
+            return render(
+                request,
+                'formsapp/contact2.html',
+                context={
+                    'form': form
+                }
+            )
+
+
+# Formularz modelu Django
+def contact3(request):
+    if request.method == "GET":
+        form = MessageModelForm()  # unbound form
+
+        return render(
+            request,
+            'formsapp/contact3.html',
+            context={
+                'form': form
+            }
+        )
+
+    elif request.method == "POST":
+        form = MessageModelForm(request.POST)  # bound form
+
+        if form.is_valid():
+            form.save()
+
+            return redirect('formsapp:contact2')
+
+        else:
+            return render(
+                request,
+                'formsapp/contact3.html',
+                context={
+                    'form': form,
+                }
+            )
