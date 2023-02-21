@@ -1,6 +1,6 @@
 from django import views
 from django.shortcuts import render, get_object_or_404
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, DetailView
 
 from viewsapp.models import Person
 
@@ -29,7 +29,7 @@ class HelloTemplateView(TemplateView):
 # Coś z CRUDa
 # R - Read (widok detalu)
 
-# widok funkcyjny
+# Widok funkcyjny
 def person_detail(request, person_id):
     #person = Person.objects.get(id=person_id)
     person = get_object_or_404(Person, id=person_id)
@@ -41,3 +41,22 @@ def person_detail(request, person_id):
             'person': person
         }
     )
+
+
+# Widok klasowy
+class PersonView(views.View):
+    def get(self, request, person_id):
+        person = get_object_or_404(Person, id=person_id)
+
+        return render(
+            request,
+            'viewsapp/person_detail.html',
+            context={
+                'person': person
+            }
+        )
+
+
+# Widok generyczny
+class PersonDetailView(DetailView):
+    model = Person

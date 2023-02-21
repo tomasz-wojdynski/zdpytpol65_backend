@@ -13,4 +13,6 @@ urlpatterns = [
 
     # R z CRUD
     path('person/<int:person_id>/', views.person_detail, name='person_detail'),
+    path('person2/<int:person_id>/', views.PersonView.as_view(), name='person-detail2'),
+    path('person3/<int:pk>/', views.PersonDetailView.as_view(), name='person-detail3'),
 ]
