@@ -10,4 +10,7 @@ urlpatterns = [
     path('hello2/', views.HelloView.as_view(), name='hello2'),
     path('hello3/', views.HelloTemplateView.as_view(), name='hello3'),
     path('hello4/', views.TemplateView.as_view(template_name='viewsapp/hello.html'), name='hello4'),
+
+    # R z CRUD
+    path('person/<int:person_id>/', views.person_detail, name='person_detail'),
 ]
