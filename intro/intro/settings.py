@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'taskapp.apps.TaskappConfig',
     'formsapp.apps.FormsappConfig',
     'viewsapp.apps.ViewsappConfig',
+    'stateapp.apps.StateappConfig',
 
     # 3rd-part
     'django_extensions',

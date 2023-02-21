@@ -30,4 +30,5 @@ urlpatterns = [
     path('task/', include('taskapp.urls')),
     path('forms/', include('formsapp.urls')),
     path('views/', include('viewsapp.urls')),
+    path('state/', include('stateapp.urls')),
 ]
