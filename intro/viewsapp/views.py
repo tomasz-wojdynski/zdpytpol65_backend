@@ -1,3 +1,4 @@
+from django import views
 from django.shortcuts import render
 
 
@@ -9,3 +10,10 @@ def hello(request):
     )
 
 
+# widok klasowy
+class HelloView(views.View):
+    def get(self, request):
+        return render(
+            request,
+            'viewsapp/hello.html'
+        )
