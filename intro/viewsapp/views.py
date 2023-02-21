@@ -1,5 +1,6 @@
 from django import views
 from django.shortcuts import render
+from django.views.generic import TemplateView
 
 
 # widok funkcyjny
@@ -17,3 +18,8 @@ class HelloView(views.View):
             request,
             'viewsapp/hello.html'
         )
+
+
+# Widok generyczny
+class HelloTemplateView(TemplateView):
+    template_name = 'viewsapp/hello.html'
