@@ -29,4 +29,5 @@ urlpatterns = [
     path('relation/', include('relationapp.urls')),
     path('task/', include('taskapp.urls')),
     path('forms/', include('formsapp.urls')),
+    path('views/', include('viewsapp.urls')),
 ]
