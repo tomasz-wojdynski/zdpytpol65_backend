@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'formsapp.apps.FormsappConfig',
     'viewsapp.apps.ViewsappConfig',
     'stateapp.apps.StateappConfig',
+    'authapp.apps.AuthappConfig',
 
     # 3rd-part
     'django_extensions',
