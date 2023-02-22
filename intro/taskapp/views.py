@@ -1,8 +1,10 @@
 from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import permission_required
 
 from taskapp.models import Task
 
 
+@permission_required('taskapp.add_task', raise_exception=True)
 def task_create_view(request):
     if request.method == "GET":
         return render(

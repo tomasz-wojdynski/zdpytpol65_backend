@@ -2,6 +2,8 @@ from django import views
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import TemplateView, DetailView
 
+from django.contrib.auth.decorators import login_required
+
 from viewsapp.models import Person
 
 # widok funkcyjny
@@ -30,6 +32,7 @@ class HelloTemplateView(TemplateView):
 # R - Read (widok detalu)
 
 # Widok funkcyjny
+@login_required(login_url='authapp:login')
 def person_detail(request, person_id):
     #person = Person.objects.get(id=person_id)
     person = get_object_or_404(Person, id=person_id)
